@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Reservation System - Booking Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #reservation-form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    #reservation-form h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div id="reservation-form">
+    <h2>Flight Reservation System</h2>
+    <form id="flight-details-form" onsubmit="return false;">
+      <label for="passenger-name">Passenger Name:</label>
+      <input type="text" id="passenger-name" name="passenger-name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="departure-city">Departure City:</label>
+      <input type="text" id="departure-city" name="departure-city" required>
+
+      <label for="destination-city">Destination City:</label>
+      <input type="text" id="destination-city" name="destination-city" required>
+
+      <label for="travel-date">Date of Travel:</label>
+      <input type="date" id="travel-date" name="travel-date" required>
+
+      <button onclick="submitDetails()">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function submitDetails() {
+      // Retrieve form values
+      var passengerName = document.getElementById('passenger-name').value;
+      var email = document.getElementById('email').value;
+      var departureCity = document.getElementById('departure-city').value;
+      var destinationCity = document.getElementById('destination-city').value;
+      var travelDate = document.getElementById('travel-date').value;
+
+      // Perform further processing (e.g., validation, sending to server) here
+      // For simplicity, we will just log the details to the console
+
+      // Redirect to the success page after successful form submission
+      window.location.href = 'booking-successful.html'; // Replace with the actual URL
+    }
+  </script>
+</body>
+</html>
